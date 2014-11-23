@@ -1,0 +1,41 @@
+body{
+	text-align:center;
+}
+
+#daohang{
+	width:500px ;
+	height:30px;
+	background-color:#adff33;
+	padding:20,10px,4px,10px;
+	font-weight:bold;
+	 float:left;
+}
+#user{
+	  width:190px ;
+	  height:40px;
+	  font-size:13px;
+	  font-style:italic;
+	  float:left;
+	  margin:0,0;
+	  color:#ffffff;
+	  line-height:40px;/*垂直居中  设置与height高度相同*/
+	  background-color:#addd33;
+	  
+}
+
+.content{
+	background-color:#6ddd7B;
+	color:#ffdaff;
+	width:685px;
+	height:705px;
+	float:left;
+	border:1px solid red;
+	overflow: auto;
+}
+
+#checked{
+	color:#ffffff;
+}
+a:link,a:visited{
+	text-decoration:none;
+}
