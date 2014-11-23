@@ -12,7 +12,7 @@ public class AccountManageAction extends BaseAction {
 	private int userid;
 	private String class_;
 	private TUsers user=null; 
-	String data;
+	String data; 
 	
 	public String getClass_() {
 		return class_;
