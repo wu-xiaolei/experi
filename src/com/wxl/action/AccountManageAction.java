@@ -1,4 +1,4 @@
-package com.wxl.action;
+﻿package com.wxl.action;
 
 import com.wxl.dao.UsersDao;
 import com.wxl.entity.TUsers;
@@ -11,7 +11,7 @@ public class AccountManageAction extends BaseAction {
 	private String userno;
 	private int userid;
 	private String class_;
-	private TUsers user=null;
+	private TUsers user=null; 
 	String data;
 	
 	public String getClass_() {
