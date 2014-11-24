@@ -20,6 +20,7 @@ body{
 	  color:#ffffff;
 	  line-height:40px;/*垂直居中  设置与height高度相同*/
 	  background-color:#addd33;
+	  overflow: auto;
 	  
 }
 

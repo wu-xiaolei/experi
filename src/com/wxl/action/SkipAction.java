@@ -60,4 +60,24 @@ public class SkipAction extends BaseAction{
 		System.out.println(informationid);
 		return "updateInfo";
 	}
+	
+	/**
+	 * 教师界面跳转
+	 */
+	public String setInformation(){
+		
+		return "setInformation";
+	}
+	
+	public String controlExperiment(){	
+		return "controlExperiment";
+	}
+	
+	public String labReport(){	
+		return "labReport";
+	}
+	public String querySignin(){	
+		return "querySignin";
+	}
+	
 }

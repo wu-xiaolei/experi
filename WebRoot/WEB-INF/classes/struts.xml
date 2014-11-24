@@ -23,6 +23,11 @@
 			<result name="teacherManage">/WEB-INF/page/teacherManage.jsp</result>
 			<result name="accountManage">/WEB-INF/page/accountManage.jsp</result>
 			<result name="updateInfo">/WEB-INF/page/updateInfo.jsp</result>
+			<!-- 跳转到教师页面 -->  
+			<result name="setInformation">/WEB-INF/page/setInformation.jsp</result>
+			<result name="controlExperiment">/WEB-INF/page/controlExperiment.jsp</result>
+			<result name="labReport">/WEB-INF/page/labReport.jsp</result>
+			<result name="querySignin">/WEB-INF/page/querySignin.jsp</result>
 		</action>
 		<!-- 管理公告信息的Action -->
 		<action name="manage_*" method="{1}" class="com.wxl.action.InformationAction">
