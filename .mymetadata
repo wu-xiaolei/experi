@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-module
   type="WEB"
-  name="experimentSystem"
+  name="experiment"
   id="myeclipse.1414236618366"
   context-root="/experimentSystem"
   j2ee-spec="5.0"
-  archive="experimentSystem.war">
+  archive="experiment.war">
   <attributes>
     <attribute name="webrootdir" value="WebRoot" />
   </attributes>
