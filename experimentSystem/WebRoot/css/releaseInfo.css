@@ -1,0 +1,12 @@
+body{
+	text-align:center;
+}
+
+#information,#showAll,#updateNotice,#addNotice,#changPWD{
+	background-color:#6ddd7B;
+	color:#ffdaff;
+	width:685px;
+	height:705px;
+	float:left;
+	border:1px solid red;
+}

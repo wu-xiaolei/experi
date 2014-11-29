@@ -1,0 +1,25 @@
+body{
+	text-align:center;
+}
+
+#signin{
+	background-color:#6add7B;
+	color:#ffffff;
+	text-align:center;
+	width:1000px;
+	height:750px;
+	margin:0 auto;
+	
+	border:1px solid green;
+}
+#input{
+	background-color:#aaaddB;
+	color:#ffffff;
+	font-size:20px;
+	text-align:center;
+	width:600px;
+	height:150px;
+	line-height:150px; 
+	margin:0 auto;
+	border:1px solid green;
+}

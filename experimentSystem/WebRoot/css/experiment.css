@@ -1,0 +1,20 @@
+.root{
+	width: 200px;
+	height: 20px;
+	font-size: 16px;
+	text-align: left;
+}
+
+.child{
+	width: 200px;
+	height: 15px;
+	padding-left: 30px;	
+	padding-top:3px;
+	font-size: 13px;
+	text-align: left;
+	cursor:hand;
+	cursor:pointer
+}
+.show{
+	display: none;
+}

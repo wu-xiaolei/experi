@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+	<table name="T_USERS" schema="WXL">
+		<primary-key>
+			<generator class="increment"></generator>
+			<key-column name="USERID" type="java.lang.Integer" />
+		</primary-key>
+		<column name="GRADE" type="java.lang.Integer"></column>
+	</table>
+	<table name="T_SIGNIN" schema="WXL">
+		<primary-key>
+			<generator class="increment"></generator>
+			<key-column name="SIGNINID" type="java.lang.Integer" />
+		</primary-key>
+	</table>
+<table name="INFORMATION" schema="WXL">
+	<primary-key>
+		<generator class="increment"></generator>
+		<key-column name="INFORMATIONID" type="java.lang.Integer"/>
+	</primary-key>
+</table>
+</hibernate-reverse-engineering>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="user" extends="json-default" namespace="/">
+	<!-- user_login.action  -->
+		<action name="user_*" method="{1}" class="com.wxl.action.LoginAction">
+			<result name="manager">/WEB-INF/page/manager.jsp</result>			
+			<result name="teacher">/WEB-INF/page/teacher.jsp</result>
+			<result name="student">/WEB-INF/page/student.jsp</result>
+			<result name="signin">/WEB-INF/page/signin.jsp</result>
+			<result name="fail">index.jsp</result>
+			<result name="exit">index.jsp</result>
+			<result name="qiandao" type="json"> 
+				<param name="root">data</param>
+			</result>
+		</action>
+		<!-- 实现跳转的Action -->
+		<action name="skip_*" method="{1}" class="com.wxl.action.SkipAction">
+			<result name="relreaseInfo">/WEB-INF/page/releaseInformation.jsp</result>
+			<result name="lab">/WEB-INF/page/labManage.jsp</result>
+			<result name="experimentManager">/WEB-INF/page/experimentManage.jsp</result>
+			<result name="studentManage">/WEB-INF/page/studentManage.jsp</result>
+			<result name="teacherManage">/WEB-INF/page/teacherManage.jsp</result>
+			<result name="accountManage">/WEB-INF/page/accountManage.jsp</result>
+			<result name="updateInfo">/WEB-INF/page/updateInfo.jsp</result>
+			<!-- 跳转到教师页面 -->  
+			<result name="setInformation">/WEB-INF/page/teacherSetInformation.jsp</result>
+			<result name="controlExperiment">/WEB-INF/page/teacherControlExperiment.jsp</result>
+			<result name="labReport">/WEB-INF/page/teacherLabReport.jsp</result>
+			<result name="querySignin">/WEB-INF/page/teacherQuerySignin.jsp</result>
+		</action>
+		<!-- 管理公告信息的Action -->
+		<action name="manage_*" method="{1}" class="com.wxl.action.InformationAction">
+			<result name="add" type="json"> 
+				<param name="root">message</param>
+			</result>
+			<result name="del" type="redirect">skip_relreaseInfo.action</result>				
+			<result name="updateInfo" type="json"> 
+				<param name="root">message</param>
+			</result>
+			<result name="toNotice" >/WEB-INF/page/notice.jsp</result>		
+			<result name="getInfo" type="json" >
+				<param name="root">data</param>
+			</result>			
+		</action>
+		<!-- 管理账户信息的Action -->
+		<action name="account_*" method="{1}" class="com.wxl.action.AccountManageAction">
+			<result name="changePassword" type="json">
+				<param name="root">data</param>
+			</result>
+			<result name="delUser" type="redirect">
+				skip_accountManage.action
+			</result>
+				
+			<result name="delStudent" type="redirect">
+				skip_studentManage.action
+			</result>	
+			<result name="delTeacher" type="redirect">
+				skip_teacherManage.action
+			</result>		
+			<result name="updateUser" type="json"> 
+				<param name="root">data</param>
+			</result>
+			
+			<result name="updateStudent" type="json"> 
+				<param name="root">data</param>
+			</result>
+			<result name="checkUsername" type="json"> 
+				<param name="root">data</param>
+			</result>
+			<result name="addUser" type="json"> 
+				<param name="root">data</param>
+			</result>
+			<result name="addStudent" type="json"> 
+				<param name="root">data</param>
+			</result>
+			
+			<result name="addTeacher" type="json"> 
+				<param name="root">data</param>
+			</result>
+		</action>
+		
+		<!-- 教师端的Action -->
+		<action name="teacher_*" method="{1}" class="com.wxl.action.TeacherAction">
+			<result name="getAllClass" type="json">
+				<param name="root">data</param>
+			</result>
+			
+			<result name="queryAllSignin" type="json">
+				<param name="root">data</param>
+			</result>
+		</action>
+	</package>
+	
+	<package name="file" extends="json-default" namespace="/">
+       <result-types>    
+             <result-type name="streamx" class="com.sunspoter.lib.web.struts2.dispatcher.StreamResultX"/>    
+          </result-types> 	
+		<action name="download" class="com.wxl.action.DownloadAction" method="execute">
+			<result type="streamx" name="success">
+				<param name="contentType">application/vnd.ms-word</param>
+				<param name="inputName">downloadFile</param> 			
+				  <param name="bufferSize">4096</param> 	
+				<param name="contentDisposition">attachment;fileName=${fileName}</param>  
+			</result>
+		</action>
+	</package>
+</struts>    
