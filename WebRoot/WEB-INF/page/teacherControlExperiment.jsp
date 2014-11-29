@@ -10,26 +10,26 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-    <title>实验室管理系统</title>
+    <title>My JSP 'teacherControlExperiment.jsp' starting page</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
 	<meta http-equiv="expires" content="0">    
 	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 	<meta http-equiv="description" content="This is my page">
-	
+	<!--
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	-->
 	<link rel="stylesheet" type="text/css" href="teacher.css">
 	
 	<link rel="stylesheet" type="text/css" href="css/login.css">
 	<link rel="stylesheet" type="text/css" href="css/manager.css">
 	<script type="text/javascript" src="js/teacher.js"></script>
-
   </head>
   
   <body>
-  
-  <div id="main"> 
-  		<div id="head"> 教师登录成功 <br></div>
+     <div id="main"> 
+  		<div id="head">实验监控 <br></div>
   	
   	<div id="left"></div>
     <div id="right">
@@ -59,6 +59,5 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     </div>
     <div id="buttom"></div>
     </div> 
-  
   </body>
 </html>

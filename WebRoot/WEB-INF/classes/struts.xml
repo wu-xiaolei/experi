@@ -24,10 +24,10 @@
 			<result name="accountManage">/WEB-INF/page/accountManage.jsp</result>
 			<result name="updateInfo">/WEB-INF/page/updateInfo.jsp</result>
 			<!-- 跳转到教师页面 -->  
-			<result name="setInformation">/WEB-INF/page/setInformation.jsp</result>
-			<result name="controlExperiment">/WEB-INF/page/controlExperiment.jsp</result>
-			<result name="labReport">/WEB-INF/page/labReport.jsp</result>
-			<result name="querySignin">/WEB-INF/page/querySignin.jsp</result>
+			<result name="setInformation">/WEB-INF/page/teacherSetInformation.jsp</result>
+			<result name="controlExperiment">/WEB-INF/page/teacherControlExperiment.jsp</result>
+			<result name="labReport">/WEB-INF/page/teacherLabReport.jsp</result>
+			<result name="querySignin">/WEB-INF/page/teacherQuerySignin.jsp</result>
 		</action>
 		<!-- 管理公告信息的Action -->
 		<action name="manage_*" method="{1}" class="com.wxl.action.InformationAction">
@@ -76,6 +76,17 @@
 			</result>
 			
 			<result name="addTeacher" type="json"> 
+				<param name="root">data</param>
+			</result>
+		</action>
+		
+		<!-- 教师端的Action -->
+		<action name="teacher_*" method="{1}" class="com.wxl.action.TeacherAction">
+			<result name="getAllClass" type="json">
+				<param name="root">data</param>
+			</result>
+			
+			<result name="queryAllSignin" type="json">
 				<param name="root">data</param>
 			</result>
 		</action>

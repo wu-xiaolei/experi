@@ -10,7 +10,7 @@
             <column name="SIGNINID" precision="22" scale="0" />
             <generator class="increment"></generator>
         </id>
-        <many-to-one name="TUsers" class="com.wxl.entity.TUsers" fetch="select" cascade="all">
+        <many-to-one name="TUsers" class="com.wxl.entity.TUsers" fetch="select">
             <column name="USERID" precision="22" scale="0" not-null="true" />
         </many-to-one>
         <property name="state" type="java.lang.String">
