@@ -17,6 +17,7 @@ public class BaseAction implements SessionAware {
 		this.session = session;
 
 	}
+	
 
 
 }

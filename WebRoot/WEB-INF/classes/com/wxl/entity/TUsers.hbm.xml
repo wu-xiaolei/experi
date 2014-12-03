@@ -25,6 +25,12 @@
         <property name="grade" type="java.lang.Integer">
             <column name="GRADE" precision="22" scale="0" not-null="true" />
         </property>
+        <set name="TExperiments" inverse="true">
+            <key>
+                <column name="USERID" precision="22" scale="0" not-null="true" />
+            </key>
+            <one-to-many class="com.wxl.entity.TExperiment" />
+        </set>
         <set name="TSignins" inverse="true">
             <key>
                 <column name="USERID" precision="22" scale="0" not-null="true" />

@@ -7,7 +7,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
-  <head>
+  <head> 
     <base href="<%=basePath%>">
     
     <title>My JSP 'teacherQuerySignin.jsp' starting page</title>
@@ -84,15 +84,20 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
               		日期<input type="text" id="datepicker" onclick="WdatePicker();"/> 
               		选择节
               		<select id="s_jie">
-              			<option selected="selected" value="ot">第一二节</option>
+              			<option selected="selected" value="sele">请选择节</option>
+              			<option value="ot">第一二节</option>
               			<option value="tf">第三四节</option>
               			<option value="fs">第五六节</option>
               			<option value="se">第七八节</option>
               			<option value="nt">第九十节</option>
               		</select>
-              		<button onclick="getAllSigninStudent();">测试</button>
+              		<button onclick="getAllSigninStudent();">查询</button>
               </div> 
-              <div class="signinStu" style="display:none"></div>  	
+              <div class="signinStu" style="display:none" id="signinstu">
+              		<table border="1px" id="t_show">
+              			
+              		</table>
+              </div>  	
     </div>
     <div id="buttom"></div>
     </div> 

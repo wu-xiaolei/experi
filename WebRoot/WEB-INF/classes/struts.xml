@@ -87,8 +87,12 @@
 			</result>
 			
 			<result name="queryAllSignin" type="json">
+				<param name="root">list</param>
+			</result>
+			<result name="realeseExp" type="json">
 				<param name="root">data</param>
 			</result>
+			
 		</action>
 	</package>
 	

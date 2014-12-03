@@ -17,6 +17,7 @@ public class TUsers implements java.io.Serializable {
 	private String password;
 	private String class_;
 	private Integer grade;
+	private Set TExperiments = new HashSet(0);
 	private Set TSignins = new HashSet(0);
 
 	// Constructors
@@ -35,12 +36,13 @@ public class TUsers implements java.io.Serializable {
 
 	/** full constructor */
 	public TUsers(String userno, String username, String password,
-			String class_, Integer grade, Set TSignins) {
+			String class_, Integer grade, Set TExperiments, Set TSignins) {
 		this.userno = userno;
 		this.username = username;
 		this.password = password;
 		this.class_ = class_;
 		this.grade = grade;
+		this.TExperiments = TExperiments;
 		this.TSignins = TSignins;
 	}
 
@@ -92,6 +94,14 @@ public class TUsers implements java.io.Serializable {
 
 	public void setGrade(Integer grade) {
 		this.grade = grade;
+	}
+
+	public Set getTExperiments() {
+		return this.TExperiments;
+	}
+
+	public void setTExperiments(Set TExperiments) {
+		this.TExperiments = TExperiments;
 	}
 
 	public Set getTSignins() {

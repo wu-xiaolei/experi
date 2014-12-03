@@ -24,7 +24,6 @@
 		<mapping resource="com/wxl/entity/TSignin.hbm.xml" />
 		<mapping resource="com/wxl/entity/TUsers.hbm.xml" />
 		<mapping resource="com/wxl/entity/Information.hbm.xml" />
-		<mapping resource="com/wxl/entity/TExperiment.hbm.xml" />
 
 	</session-factory>
 

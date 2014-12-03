@@ -20,18 +20,33 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
-	<link rel="stylesheet" type="text/css" href="teacher.css">
+	<link rel="stylesheet" type="text/css" href="css/teacher.css">
 	
 	<link rel="stylesheet" type="text/css" href="css/login.css">
 	<link rel="stylesheet" type="text/css" href="css/manager.css">
+	<script type="text/javascript" src="js/jquery-1.4.3.js"></script>
 	<script type="text/javascript" src="js/teacher.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#releaseExperi,#checkExperi").hide();
+		});
+		checkboxClass();
+	</script>
   </head>
   
   <body>
     <div id="main"> 
   		<div id="head"> 实验报告 <br></div>
   	
-  	<div id="left"></div>
+  	<div id="left">
+  		
+  		
+  		<ul>
+  			<li  style="cursor:hand;cursor:pointer" onclick="showRelease();">发布实验报告</li>
+  			<li  style="cursor:hand;cursor:pointer" onclick="showCheck();">批改实验报告</li>
+  			
+  		</ul>
+  	</div>
     <div id="right">
     
                <div id="daohang">
@@ -53,8 +68,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
              	<a href="${exit}" onclick="return exit();">退出登录</a>
                </div> 
                
-              <div class="option">
-              		班级
+              <div class="exp" id="releaseExperi">
+              		实验名称：<input type="text" id="experientname"/>&nbsp;
+              		班级：<span id="addCheckbox"></span>
+              		<button onclick="realeseExp();">发布实验</button>
+              		
+              </div> 
+               <div class="exp" id="checkExperi">
+              		
               </div>   	
     </div>
     <div id="buttom"></div>

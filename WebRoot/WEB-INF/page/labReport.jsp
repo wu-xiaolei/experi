@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ taglib uri="/struts-tags" prefix="s" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -19,10 +20,24 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
-
+	<link rel="stylesheet" type="text/css" href="css/teacher.css">
+	
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+	<link rel="stylesheet" type="text/css" href="css/manager.css">
+	<script type="text/javascript" src="js/jquery-1.4.3.js"></script>
+	<script type="text/javascript" src="js/teacher.js"></script>
   </head>
   
   <body>
-    This is my JSP page. <br>
+    <div id="main"> 
+  		<div id="head">实验报告 <br></div>
+  	
+  	<div id="left"></div>
+    <div id="right">
+    
+              
+    </div>
+    <div id="buttom"></div>
+    </div> 
   </body>
 </html>

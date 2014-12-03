@@ -15,10 +15,17 @@
 			<key-column name="SIGNINID" type="java.lang.Integer" />
 		</primary-key>
 	</table>
-<table name="INFORMATION" schema="WXL">
-	<primary-key>
-		<generator class="increment"></generator>
-		<key-column name="INFORMATIONID" type="java.lang.Integer"/>
-	</primary-key>
-</table>
+	<table name="INFORMATION" schema="WXL">
+		<primary-key>
+			<generator class="increment"></generator>
+			<key-column name="INFORMATIONID" type="java.lang.Integer" />
+		</primary-key>
+	</table>
+	<table name="T_EXPERIMENT" schema="WXL">
+		<primary-key>
+			<generator class="increment"></generator>
+			<key-column name="EXPERID" type="java.lang.Integer" />
+		</primary-key>
+		<column name="SCORE" type="java.lang.Integer"></column>
+	</table>
 </hibernate-reverse-engineering>
